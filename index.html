@@ -1,0 +1,263 @@
+<!-- skillka-do
+ -->
+
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LPの練習です。" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;900&display=swap" rel="stylesheet">
+    <title>ポートフォリオ</title>
+</head>
+
+<body>
+
+    <!--Header -->
+    <div id="loading">
+        <div class="loader">
+            <h2>Now Loading...</h2>
+            <script>
+                window.onload = function () {
+                    const loader = document.querySelector("#loading");
+                    const content2 = document.querySelector(".content");
+
+                    setTimeout(() => {
+                        loader.style.opacity = "0";
+                        loader.style.transition = "opacity 2s ease";
+
+                        setTimeout(() => {
+                            loader.style.display =
+                                "none";
+                            content2.style.visibility = "visible";
+                        }, 1000);
+                    }, 5000);
+                };
+            </script>
+
+            <!-- countup -->
+            <div id="counter">0</div>
+
+            <script>
+                const finalValue = 100;
+                const incrementValue = 1;
+                const interval = 20;
+                const displayDuration = 6000;
+                let currentCount = 0;
+                const counterElement = document.getElementById('counter');
+
+                function updateCounter() {
+                    if (currentCount <= finalValue) {
+                        counterElement.textContent = currentCount;
+                        currentCount += incrementValue;
+                    } else {
+                        clearInterval(counterInterval);
+                        setTimeout(() => {
+                            counterElement.style.display = "none";
+                        }, displayDuration);
+                    }
+                }
+
+                const counterInterval = setInterval(updateCounter, interval);
+            </script>
+        </div>
+    </div>
+
+    </div>
+    <div id="top"></div>
+    <header id="header">
+        <h1 class="site-title">
+            <a href="#">Portfolio</a>
+        </h1>
+    </header>
+
+    <!-- hamburger -->
+    <div id="navArea">
+        <nav>
+            <div class="inner">
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Skill</a></li>
+                    <li><a href="#">Future</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mask"></div>
+    </div>
+    <script src="style.js"></script>
+
+    <!-- Main -->
+    <div id="main">
+        <video src="image/earth.mp4" autoplay loop muted></video>
+        <div class="video-overlay">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Check out my skills and projects below!</p>
+        </div>
+    </div>
+
+    <!-- about -->
+    <section id="about" class="wrapper">
+        <h2 class="sec-title">About</h2>
+        <ul>
+            <li></li>
+            <li>エンジニアを目指して学習中</li>
+            <li>メールアドレス：xxxxxxx@xxx.com</li>
+            <li></li>
+        </ul>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem natus praesentium enim alias expedita
+            cupiditate animi necessitatibus vitae atque blanditiis rerum hic obcaecati, cumque inventore facere veniam
+            culpa commodi libero magnam dolorem at iste minus. Necessitatibus provident fugit, exercitationem hic ipsam
+            tenetur voluptatem ea. Similique numquam fugit iusto amet repudiandae?
+        </p>
+    </section>
+
+    <!-- Skill -->
+    <section id="works" class="wrapper">
+        <h2 class="sec-title">Skill</h2>
+        <ul>
+          <li>
+            <div class="card">
+              <div class="content">
+                <h2><img src="image/java.png" alt=""></h2>
+                <h3>Java</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi ducimus architecto nemo obcaecati
+                  consequuntur.
+                </p>
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+          </li>
+    
+          <li>
+            <div class="card">
+              <div class="content">
+                <h2><img src="image/py.png" alt=""></h2>
+                <h3>Python</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi ducimus architecto nemo obcaecati
+                  consequuntur.
+                </p>
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+          </li>
+    
+          <li>
+            <div class="card">
+              <div class="content">
+                <h2><img src="image/sql.png" alt=""></h2>
+                <h3>MySQL</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi ducimus architecto nemo obcaecati
+                  consequuntur.
+                </p>
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+          </li>
+    
+          <li>
+            <div class="card">
+              <div class="content">
+                <h2><img src="image/html.png" alt=""></h2>
+                <h3>HTML</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi ducimus architecto nemo obcaecati
+                  consequuntur.
+                </p>
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+          </li>
+    
+          <li>
+            <div class="card">
+              <div class="content">
+                <h2><img src="image/css.png" alt=""></h2>
+                <h3>CSS</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi ducimus architecto nemo obcaecati
+                  consequuntur.
+                </p>
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+          </li>
+    
+          <li>
+            <div class="card">
+              <div class="content">
+                <h2><img src="image/js.png" alt=""></h2>
+                <h3>Javascript</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi ducimus architecto nemo obcaecati
+                  consequuntur.
+                </p>
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+          </li>
+    
+        </ul>
+        <script src="./style.js"></script>
+        <script>
+          VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+          });
+        </script>
+      </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrapper">
+        <h2 class="sec-title">Contact</h2>
+        <p>お問い合わせは以下のフォームから
+        </p>
+        <form action="#" method="post">
+            <!-- フォーム作成 -->
+            <dl>
+                <dt><label for="name">お名前</label></dt>
+                <dd><input type="text" id="name"></dd>
+                <!-- 文字の入力 -->
+                <dt><label for="email">メールアドレス</label></dt>
+                <dd><input type="email" id="email"></dd>
+                <dt><label for="name">内容</label></dt>
+                <dd><textarea id="content" cols="30" rows="10"></textarea></dd>
+                <!-- テキスト入力 -->
+            </dl>
+            <div class="button"><input type="submit" value="送信"></div>
+            <!-- 送信ボタン作成 -->
+        </form>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <ul class="footer-menu">
+            <li><a href="#top">Home /</a></li>
+            <li><a href="#about">About /</a></li>
+            <li><a href="#works">Skill /</a></li>
+            <li><a href="#contact">Contact /</a></li>
+        </ul>
+        <p> Thanks for watching !!! </p>
+    </footer>
+</body>
+
+</html>
