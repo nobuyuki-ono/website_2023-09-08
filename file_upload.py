@@ -1,5 +1,5 @@
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 import tensorflow as tf
 from flask import Flask, request, render_template, redirect, url_for
 from tensorflow.keras.models import load_model
